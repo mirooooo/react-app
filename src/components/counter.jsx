@@ -7,7 +7,6 @@ class Counter extends Component {
 
   //   Aways use Arrow Function to Bind Event Handlers
   handleIncrement = () => {
-    this.state.count++;
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -27,7 +26,7 @@ class Counter extends Component {
 
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "warning" : "primary";
+    return (classes += this.state.count === 0 ? "warning" : "danger");
   }
 
   formatCount() {
